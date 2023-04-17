@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.scss"
+import style from "./Lista.module.scss"
 
 function Lista() {
     
@@ -22,11 +22,11 @@ function Lista() {
 
     //oque oa lista irá retornar.
     return (
-        <aside className='listaTarefas'>
+        <aside className={style.listaTarefas}>
             <h2>Estudo do dia</h2>
             <ul>
                 {tarefas.map((item,index)=>(                    //Posso chamar a lista de tarefas aqui usando "{}". Para o React é necessário usar o "index" no map por ser um renderização dinamica
-                    <li   key={index} className='item'>
+                    <li   key={index} className={style.item}>
                         <h3>{item.tarefas}</h3>
                         <span>{item.tempo}</span>
                     </li>
